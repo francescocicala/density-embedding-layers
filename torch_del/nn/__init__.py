@@ -1,1 +1,1 @@
-from plateau import linear_plateau
+from .plateau import linear_plateau
