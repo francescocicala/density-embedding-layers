@@ -4,4 +4,6 @@ channels:
 dependencies:
   - conda
   - python=3.9
+  - torch
+  - matplotlib
 prefix: /home/eigen/miniconda3
