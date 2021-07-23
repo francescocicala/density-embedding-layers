@@ -1,6 +1,7 @@
 import torch
+from .utilities import Broadcastable
 
-def linear_plateau(x: torch.Tensor, a: torch.Tensor, b: torch.Tensor, r: float):
+def linear_plateau(x: Broadcastable, a: Broadcastable, b: Broadcastable, r: float):
     r_inv = 1 / r
     a1 = - torch.nn.functional.relu(- x + a + r_inv / 2)
     a2 = torch.nn.functional.relu(- x + (a - r_inv / 2))
